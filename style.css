@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 main{
     width: 100vw;
 }
@@ -5,30 +9,35 @@ main{
 #home{
     text-align: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 
-    background-image: url(/img/asphalt-back-road-blurred-background-1546901.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background: url(/img/asphalt-back-road-blurred-background-1546901.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #name{
-    font-size: 10vh;
-    height: 10vh;
+    padding-top: 40px;
+    font-size: 5em;
+    font-family: sans-serif;
 }
 
 #headshot{
-    width: 15%;
+    width: 300px;
     border-radius: 25%;
-    margin-bottom: 5vh;
-    margin-top: 15vh;
+    margin-bottom: 18px;
+    margin-top: 65px;
 }
 
 #blurb{
-    height: 5vh;
+    height: 50px;
 }
 
 #nav-container{
+    position: fixed;
+    bottom: 20px;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -36,18 +45,41 @@ main{
 }
 
 nav{
-    height: 20vh;
-    width: 320px;
+    width: 500px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-width: 320px;
+    font-family: 'quicksand';
 }
 
-nav a{
-    
+nav a:link, nav a:visited, nav a:hover, nav a:active{
+    font-size: 1.6em;
+    color: #34495e; 
+}
+
+nav p{
+    font-size: 1.6em;
 }
 
 .round{
     border-radius: 50%;
+}
+
+#projects{
+    height: 750px;
+    background-color: #bdc3c7;
+}
+
+#contact{
+    height: 750px;
+    background-color: #ecf0f1;
+}
+
+#aboutMe{
+    height: 750px;
+    background-color: #7f8c8d;
+}
+
+@media only screen and (max-width: 1060px){
+
 }
