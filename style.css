@@ -3,7 +3,7 @@ html{
 }
 
 main{
-    width: 100vw;
+    width: 100%;
 }
 
 #home{
@@ -36,12 +36,15 @@ main{
 }
 
 #nav-container{
-    position: fixed;
-    bottom: 20px;
-    width: 100vw;
+    position: sticky;
+    top: 0px;
+    bottom: 50px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0,0,0, 0.3);
+    padding-bottom: 5px;
 }
 
 nav{
@@ -52,9 +55,14 @@ nav{
     font-family: 'quicksand';
 }
 
-nav a:link, nav a:visited, nav a:hover, nav a:active{
+nav a{
+    transition: 0.4s;
     font-size: 1.6em;
-    color: #34495e; 
+    color: #27ae60; 
+}
+
+nav a:hover{
+    color: #ffffff;
 }
 
 nav p{
@@ -70,14 +78,41 @@ nav p{
     background-color: #bdc3c7;
 }
 
-#contact{
-    height: 750px;
-    background-color: #ecf0f1;
-}
-
 #aboutMe{
     height: 750px;
     background-color: #7f8c8d;
+    display: flex;
+    align-items: center;
+}
+
+#family-picture{
+    height: 550px;
+    margin-left: 50px;
+    border-radius: 15px;
+}
+
+#aboutMeBlurb{
+    margin-left: 50px;
+}
+
+#aboutMeBlurb ul li{
+    list-style-type: none;
+    line-height: 2em;
+}
+
+li strong{
+    font-family: 'Quicksand', Sans-serif;
+    font-size: 2em;
+}
+
+li span{
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+#contact{
+    height: 750px;
+    background-color: #ecf0f1;
 }
 
 @media only screen and (max-width: 1060px){
