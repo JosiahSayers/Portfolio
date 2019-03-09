@@ -6,10 +6,6 @@ html{
     font-family: 'quicksand', sans-serif;
 }
 
-main{
-    width: 100%;
-}
-
 #home{
     text-align: center;
     height: 100vh;
@@ -28,7 +24,8 @@ main{
 }
 
 #headshot{
-    width: 300px;
+    max-width: 300px;
+    width: 75%;
     border-radius: 25%;
     margin-bottom: 18px;
     margin-top: 65px;
@@ -52,12 +49,28 @@ main{
     padding-bottom: 5px;
 }
 
+#menu-button{
+    display: none;
+    position: sticky;
+    top: 0px;
+    bottom: 50px;
+    text-align: right;
+    background: rgba(0,0,0,0);
+}
+
+input{
+    display: none;
+    position: relative;
+}
+
 nav{
     width: 500px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: 'quicksand';
+    transition: 0.4s;
+    -webkit-transition: all 0.4s ease;
 }
 
 nav a{
@@ -151,6 +164,77 @@ li h2{
     background-color: #ecf0f1;
 }
 
-@media only screen and (max-width: 1060px){
+@media all and (max-width: 480px){
 
+    #name{
+        font-size: 2.5em;
+    }
+
+    #nav-container{
+
+    }
+
+    #menu-button{
+        display: contents;
+    }
+
+    .fa-bars{
+        font-size: 1.2em;
+        padding-top: 5px;
+        padding-right: 15px;
+    }
+
+    nav{
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        transition-duration: 0.4s;
+    }
+
+    #menu-toggle:checked + #nav-container{
+        
+    }
+
+    #menu-toggle:checked + #menu {
+        max-height: auto;
+        height: fit-content;
+      }
+
+    nav a{
+        font-size: 1.4em;
+    }
+    
+    nav p{
+        display: none;
+        position: relative;
+    }
+
+    #projects, #aboutMe, #contact{
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    /* ABOUT ME SECTION */
+
+    #aboutMe{
+        justify-items: center;
+        align-items: center;
+    }
+
+    #family-picture{
+        height: auto;
+        width: 85%;
+        margin: 5%;
+    }
+
+    #aboutMeBlurb{
+        margin: 0px 5%;
+    }
+
+    #aboutMeBlurb ul{
+        margin-bottom: 5%;
+    }
 }
