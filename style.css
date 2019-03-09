@@ -2,6 +2,10 @@ html{
     scroll-behavior: smooth;
 }
 
+*{
+    font-family: 'quicksand', sans-serif;
+}
+
 main{
     width: 100%;
 }
@@ -11,7 +15,7 @@ main{
     height: 100vh;
     width: 100%;
 
-    background: url(/img/asphalt-back-road-blurred-background-1546901.jpg) no-repeat center center fixed;
+    background: url(/img/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -21,7 +25,6 @@ main{
 #name{
     padding-top: 40px;
     font-size: 5em;
-    font-family: sans-serif;
 }
 
 #headshot{
@@ -33,6 +36,8 @@ main{
 
 #blurb{
     height: 50px;
+    padding-top: 55px;
+    font-size: 1.35em;
 }
 
 #nav-container{
@@ -73,10 +78,14 @@ nav p{
     border-radius: 50%;
 }
 
+/* PROJECTS SECTION */
+
 #projects{
     height: 750px;
     background-color: #bdc3c7;
 }
+
+/* ABOUT ME SECTION */
 
 #aboutMe{
     height: 750px;
@@ -93,22 +102,46 @@ nav p{
 
 #aboutMeBlurb{
     margin-left: 50px;
+    height: 550px;
+    padding-top: 60px;
+}
+
+.about-me-h2{
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 2.5em;
 }
 
 #aboutMeBlurb ul li{
     list-style-type: none;
-    line-height: 2em;
+    padding: 5px 0px;
 }
 
 li strong{
-    font-family: 'Quicksand', Sans-serif;
-    font-size: 2em;
+    font-weight: bold;
 }
 
-li span{
-    text-align: justify;
-    text-justify: newspaper;
+ul hr{
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
+
+li h2{
+    margin-top: 20px;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.skill-header{
+    font-weight: bold;
+}
+
+.skill{
+    padding: 0px 0px;
+}
+
+/* CONTACT SECTION */
 
 #contact{
     height: 750px;
