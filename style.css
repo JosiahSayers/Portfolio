@@ -96,7 +96,7 @@ nav{
 nav a{
   transition: 0.4s;
   font-size: 1.6em;
-  color: #A86448;
+  color: #94A88C;
 }
 
 nav a:hover{
@@ -116,7 +116,6 @@ nav p{
 #projects{
   min-height: 650px;
   height: 100vh;
-  /*background-color: #e2e1e0;*/
   background-color: #ecf0f1;
   padding: 50px 50px;
   display: flex;
