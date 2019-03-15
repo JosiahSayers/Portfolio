@@ -36,6 +36,11 @@ body{
 #name{
   font-size: 5em;
   font-family: 'Raleway';
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 25px;
+  padding: 6px 5px 5px 5px;
+  box-shadow: 0px 0px 40px 40px rgba(0,0,0,0.3);
+  color: #BBB28E;
 }
 
 #headshot{
@@ -46,8 +51,14 @@ body{
 
 #blurb{
   height: 50px;
-  font-size: 1.7em;
-  text-shadow: 0px 0px 1px rgba(255,255,255,0.7);
+  font-size: 2em;
+  font-weight: 500;
+  text-shadow: 0px 0px 35px rgba(255,255,255,0.5);
+  color: #94A88C; 
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 25px;
+  padding: 6px 5px 5px 5px;
+  box-shadow: 0px 0px 40px 40px rgba(0,0,0,0.2);
 }
 
 #nav-container{
@@ -59,7 +70,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0,0,0, 0.5);
   padding-bottom: 5px;
 }
 
@@ -85,7 +96,7 @@ nav{
 nav a{
   transition: 0.4s;
   font-size: 1.6em;
-  color: #27ae60; 
+  color: #A86448;
 }
 
 nav a:hover{
@@ -263,13 +274,12 @@ li h2{
 #connect ul li{
   margin: 0 15px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
   vertical-align: top;
 }
 
 #connect ul li a:hover{
-  color: #74787c;
-  font-size: 6.5em;
+  color: #c0c0c0;
 }
 
 @media all and (max-width: 600px){
