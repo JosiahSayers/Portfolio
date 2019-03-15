@@ -22,8 +22,17 @@ body{
   background-size: cover;
 }
 
+#home div.info{
+  height: 90vh;
+  width: 100%;
+  padding-top: 5vh;
+  display: grid;
+  grid-template-rows: 1fr 5fr 3fr;
+  align-items: center;
+  justify-items: center;
+}
+
 #name{
-  padding-top: 40px;
   font-size: 5em;
   font-family: 'Raleway';
 }
@@ -32,13 +41,10 @@ body{
   max-width: 300px;
   width: 75%;
   border-radius: 25%;
-  margin-bottom: 18px;
-  margin-top: 65px;
 }
 
 #blurb{
   height: 50px;
-  padding-top: 55px;
   font-size: 1.35em;
 }
 
