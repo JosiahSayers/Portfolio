@@ -40,7 +40,7 @@ html{
 #nav-container{
     position: sticky;
     top: 0px;
-    bottom: 50px;
+    bottom: 0px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,68 @@ nav p{
 #projects{
     min-height: 650px;
     height: 100vh;
-    background-color: #bdc3c7;
+    background-color: #e2e1e0;
+    padding: 50px 50px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects div.container{
+  width: 40%;
+  min-width: 300px;
+  height: 450px;
+  overflow: hidden;
+  background-color: white;
+  padding: 2.5%;
+  border-radius: 2px;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#projects div.container:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#projects div.container img{
+  width: 100%;
+  border-radius: 3px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#projects div.container a{
+  text-decoration: none;
+  color: black;
+}
+
+#projects .name{
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 3.5% 0;
+}
+
+#projects .description{
+
+}
+
+#projects .about{
+  margin: 3.5% 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+#projects .about li{
+  background-color: lightgray;
+  margin: 5px 0;
+  padding: 0 7px;
+  padding-bottom: 2px;
+  border-radius: 15px;
+  white-space: nowrap;
 }
 
 /* ABOUT ME SECTION */
@@ -159,79 +220,100 @@ li h2{
     background-color: #ecf0f1;
 }
 
-@media all and (max-width: 480px){
+@media all and (max-width: 600px){
 
-    #name{
-        font-size: 2.5em;
-    }
+  body{
+    min-width: 320px;
+  }
 
-    #nav-container{
-        display: flex;
-        flex-direction: column;
-    }
+  #name{
+      font-size: 2.5em;
+  }
 
-    #nav-container label{
-        width: 100%;
-        text-align: start;
-        padding-left: 25px;
-    }
+  #nav-container{
+      display: flex;
+      flex-direction: column;
+  }
 
-    .fa-bars{
-        font-size: 1.5em;
-        padding-top: 5px;
-        padding-right: 15px;
-        display: initial;
-    }
+  #nav-container label{
+      width: 100%;
+      text-align: start;
+      padding-left: 25px;
+  }
 
-    nav{
-        flex-direction: column;
-        flex-wrap: wrap;
-        overflow: hidden;
-        height: 0;
-        padding: 0;
-        margin: 0;
-        transition-duration: 0.4s;
-    }
+  .fa-bars{
+      font-size: 1.5em;
+      padding-top: 5px;
+      padding-right: 15px;
+      display: initial;
+      cursor: pointer;
+  }
 
-    #menu-toggle:checked ~ #nav-container nav{
-        display: flex;
-        flex-direction: column;
-        max-height: auto;
-        height: fit-content;
-    }
+  nav{
+      flex-direction: column;
+      flex-wrap: wrap;
+      overflow: hidden;
+      height: 0;
+      padding: 0;
+      margin: 0;
+      transition-duration: 0.4s;
+  }
 
-    nav a{
-        font-size: 1.4em;
-    }
-    
-    nav p{
-        display: none;
-        position: relative;
-    }
+  #menu-toggle:checked ~ #nav-container nav{
+      display: flex;
+      flex-direction: column;
+      max-height: auto;
+      height: fit-content;
+  }
 
-    #projects, #aboutMe, #contact{
-        flex-direction: column;
-        height: fit-content;
-    }
+  nav a{
+      font-size: 1.4em;
+  }
+  
+  nav p{
+      display: none;
+      position: relative;
+  }
 
-    /* ABOUT ME SECTION */
+  #projects, #aboutMe, #contact{
+      flex-direction: column;
+      height: fit-content;
+  }
 
-    #aboutMe{
-        justify-items: center;
-        align-items: center;
-    }
+  /* ABOUT ME SECTION */
 
-    #family-picture{
-        height: auto;
-        width: 85%;
-        margin: 5%;
-    }
+  #aboutMe{
+      justify-items: center;
+      align-items: center;
+  }
 
-    #aboutMeBlurb{
-        margin: 0px 5%;
-    }
+  #family-picture{
+      height: auto;
+      width: 85%;
+      margin: 5%;
+  }
 
-    #aboutMeBlurb ul{
-        margin-bottom: 5%;
-    }
+  #aboutMeBlurb{
+      margin: 0px 5%;
+  }
+
+  #aboutMeBlurb ul{
+      margin-bottom: 5%;
+  }
+
+  /* PROJECTS SECTION */
+  #projects{
+    display: flex;
+    padding: 0;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #projects div.container{
+    width: 80%;
+    padding: 5%;
+    min-width: calc(320px - 20%);
+    max-width: calc(320px - 20%);
+  }
 }
