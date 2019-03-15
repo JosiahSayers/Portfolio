@@ -45,7 +45,8 @@ body{
 
 #blurb{
   height: 50px;
-  font-size: 1.35em;
+  font-size: 1.7em;
+  text-shadow: 0px 0px 1px rgba(255,255,255,0.7);
 }
 
 #nav-container{
