@@ -100,8 +100,7 @@ nav p{
 }
 
 #projects div.container{
-  width: 40%;
-  min-width: 300px;
+  width: 400px;
   height: 450px;
   overflow: hidden;
   background-color: white;
@@ -133,10 +132,6 @@ nav p{
   margin: 3.5% 0;
 }
 
-#projects .description{
-
-}
-
 #projects .about{
   margin: 3.5% 0;
   list-style: none;
@@ -161,6 +156,7 @@ nav p{
     min-height: 650px;
     height: 100vh;
     background-color: #7f8c8d;
+    padding-right: 25px;
     display: flex;
     align-items: center;
 }
@@ -212,9 +208,9 @@ li h2{
     padding: 0px 0px;
 }
 
-/* CONTACT SECTION */
+/* CONNECT SECTION */
 
-#contact{
+#connect{
     min-height: 650px;
     height: 100vh;
     background-color: #ecf0f1;
