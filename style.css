@@ -25,6 +25,7 @@ body{
 #name{
   padding-top: 40px;
   font-size: 5em;
+  font-family: 'Raleway';
 }
 
 #headshot{
@@ -183,6 +184,7 @@ nav p{
   text-align: center;
   margin-bottom: 10%;
   font-size: 2.5em;
+  font-family: 'Raleway';
 }
 
 #aboutMeBlurb ul li{
@@ -204,6 +206,7 @@ li h2{
   font-size: 2.5em;
   text-align: center;
   margin-bottom: 25px;
+  font-family: 'Raleway';
 }
 
 .skill-header{
@@ -220,6 +223,44 @@ li h2{
   height: 250px;
   background-color: #ecf0f1;
   border-radius: 10px;
+  padding-top: 50px;
+}
+
+#connect h1{
+  text-align: center;
+  font-size: 3.5em;
+  font-family: 'Raleway';
+  padding-bottom: 35px;
+}
+
+#connect ul.networks{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#connect ul a{
+  color: #495057;
+  transition: 0.5s;
+  font-size: 6em;
+}
+
+#connect ul li{
+  list-style: none;
+}
+
+#connect ul li{
+  margin: 0 15px;
+  cursor: pointer;
+  transition: 0.5s;
+  vertical-align: top;
+}
+
+#connect ul li a:hover{
+  color: #74787c;
+  font-size: 6.5em;
 }
 
 @media all and (max-width: 600px){
