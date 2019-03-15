@@ -4,6 +4,7 @@ html{
 
 *{
   font-family: 'quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body{
