@@ -15,7 +15,7 @@ body{
   text-align: center;
   font-size: 3.5em;
   font-family: 'Raleway';
-  color: #BBB28E;
+  color: #94A88C;
 }
 
 #home{
@@ -91,7 +91,7 @@ input{
 }
 
 nav{
-  width: 500px;
+  width: 570px;
   display: flex;
   justify-content: space-around;
   align-items: center;
