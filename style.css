@@ -11,6 +11,13 @@ body{
   background-color: #ecf0f1;
 }
 
+.section-header{
+  text-align: center;
+  font-size: 3.5em;
+  font-family: 'Raleway';
+  color: #BBB28E;
+}
+
 #home{
   text-align: center;
   height: 100vh;
@@ -115,28 +122,24 @@ nav p{
 
 #projects{
   min-height: 650px;
-  height: 100vh;
   background-color: #ecf0f1;
   padding: 50px 50px;
 }
 
 #projects h2{
-  text-align: center;
-  font-size: 2.5em;
-  font-family: 'Raleway';
-  margin-bottom: 25px;
+  margin-bottom: 75px;
 }
 
 #projects .project-boxes-container{
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #projects div.container{
-  width: 400px;
-  height: 450px;
+  width: 500px;
+  min-height: 450px;
   overflow: hidden;
   background-color: white;
   padding: 2.5%;
@@ -158,6 +161,11 @@ nav p{
 #projects div.container a{
   text-decoration: none;
   color: black;
+  transition: 0.3s;
+}
+
+#projects div.container a:hover{
+  color: lightblue;
 }
 
 #projects .name{
@@ -168,12 +176,11 @@ nav p{
 }
 
 #projects .about{
-  margin: 3.5% 0;
+  margin-top: 20px;
   list-style: none;
   width: 100%;
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+  flex-flow: column nowrap;
 }
 
 #projects .about li{
@@ -182,7 +189,7 @@ nav p{
   padding: 0 7px;
   padding-bottom: 2px;
   border-radius: 15px;
-  white-space: nowrap;
+  width: fit-content;
 }
 
 /* ABOUT ME SECTION */
@@ -223,10 +230,6 @@ nav p{
 }
 
 .hidden-about-me{
-  text-align: center;
-  margin-bottom: 5%;
-  font-size: 2.5em;
-  font-family: 'Raleway';
   display: none;
 }
 
@@ -269,9 +272,6 @@ li h2{
 }
 
 #connect h1{
-  text-align: center;
-  font-size: 3.5em;
-  font-family: 'Raleway';
   padding-bottom: 35px;
 }
 
@@ -405,8 +405,22 @@ li h2{
 
   #projects .project-boxes-container{
     flex-flow: column nowrap;
-    align-content: center;
-    justify-items: center; 
+    align-items: space-between;
+    justify-items: space-between;
+    width: 100%;
+  }
+
+  #projects .container{
+    margin-bottom: 50px;
+    width: 80%;
+  }
+
+  #projects .name{
+    text-decoration-line: underline;
+  }
+
+  #projects h2{
+    margin-bottom: 45px;
   }
 
   /* ABOUT ME SECTION */
