@@ -290,6 +290,11 @@ li h2{
   font-size: 6em;
 }
 
+#resume-icon{
+  font-size: 0.85em;
+  transform: translate(0, -0.075em);
+}
+
 #connect ul li{
   list-style: none;
 }
