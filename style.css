@@ -317,6 +317,7 @@ li h2{
   #home{
     min-height: 100vh;
     height: unset;
+    overflow: hidden;
 
     background: url(/img/background.jpg) no-repeat center center;
     -webkit-background-size: cover;
