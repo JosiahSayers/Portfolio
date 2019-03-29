@@ -187,8 +187,7 @@ nav p{
 #projects .about li{
   background-color: lightgray;
   margin: 5px 0;
-  padding: 0 7px;
-  padding-bottom: 2px;
+  padding: 3px 7px;
   border-radius: 15px;
   width: fit-content;
 }
