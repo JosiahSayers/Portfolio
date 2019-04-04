@@ -369,6 +369,10 @@ li h2{
   transition: opacity 0.3s, visibility 0s, background-color 0.3s;
 }
 
+.hidden-span {
+  display: none;
+}
+
 /*-----------------------------------------------------------------
                     Media Queries
 -------------------------------------------------------------------*/
