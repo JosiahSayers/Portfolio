@@ -29,7 +29,6 @@ projectContainers.forEach(container => {
 });
 
 document.addEventListener('keydown', event => {
-  console.log(event);
   if(event.keyCode === 27) {
     overlay.classList.add('hide');
     overlayImg.classList.add('hide');
