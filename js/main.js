@@ -19,11 +19,12 @@ overlay.addEventListener('click', () => {
 const projectContainers = document.querySelectorAll('#projects div.project-boxes-container div.container');
   projectContainers.forEach(container => {
     container.addEventListener('mouseenter', event => {
-      event.path[0].children[1].classList.add('name-hover');
+      console.log(event);
+      event.path[0].children[1].children[0].classList.add('name-hover');
   })
 })
 projectContainers.forEach(container => {
   container.addEventListener('mouseleave', event => {
-    event.path[0].children[1].classList.remove('name-hover');
+    event.path[0].children[1].children[0].classList.remove('name-hover');
   })
 });

@@ -190,6 +190,10 @@ nav p{
   cursor: zoom-in;
 }
 
+#projects div.container img:hover {
+  transform: scale(1.02);
+}
+
 #projects div.container a{
   text-decoration: none;
   color: black;
