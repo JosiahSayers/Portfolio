@@ -31,10 +31,13 @@
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
   </head>
   <body>
+
+    <div class="project-overlay hide"><img class="hide" src="img/projects/tasks-desktop.png" /></div>
+
     <div id="home">
       <div class="info">
         <h1 id="name">Josiah Sayers</h1>
-        <img id="headshot" src="/img/headshot.jpeg">
+        <img id="headshot" src="/img/headshot.jpeg" alt="Headshot of Josiah Sayers">
         <p id="blurb">Hi, I'm Josiah! I'm a full stack web developer in Columbus, Ohio.</p>
       </div>
     </div>
@@ -59,9 +62,13 @@
       <div class="project-boxes-container">
 
         <div class="container">
-            <a href="https://todo.josiahsayers.com" target="_blank"><img src="img/projects/tasks-desktop.png" />
-            <h1 class="name">Tasks</h1></a>
-            <p class="description">A To-do list web application built with no frameworks or libraries. Only HTML, CSS, and Javascript.</p>
+            <img class="project-img" src="img/projects/tasks-desktop.png" />
+            <a href="https://todo.josiahsayers.com" target="_blank"><h1 class="name">Tasks</h1></a>
+            <div class="view-links">
+              <a href="https://todo.josiahsayers.com" target="_blank">View Live</a>
+              <a href="https://github.com/JosiahSayers/Tasks" target="_blank">View Source</a>
+            </div>
+            <p class="description">A to-do list web application built with no frameworks or libraries. Only HTML, CSS, and Javascript.</p>
             <ul class="about">
               <li>Built with pure HTML, CSS and JS</li>
               <li>Javascript Event Listeners</li>
@@ -71,21 +78,13 @@
         </div>
 
         <div class="container">
-            <a href="https://pong.josiahsayers.com" target="_blank"><img src="img/projects/pong.png" />
-            <h1 class="name">Pong</h1></a>
-            <p class="description">A custom implementation of the classic game Pong, using the p5.js framework.</p>
-            <ul class="about">
-              <li>Collision detection</li>
-              <li>CPU controlled opponent</li>
-              <li>Key listener events</li>
-              <li>Sounds on collision detection</li>
-            </ul>
-        </div>
-
-        <div class="container">
-          <a href="https://www.shrtlnk.dev" target="_blank"><img src="img/projects/shrtlnk.png" />
-          <h1 class="name">ShrtLnk</h1></a>
-          <p class="description">A link shortening application built with C# .NET Core MVC</p>
+          <img class="project-img" src="img/projects/shrtlnk.png" />
+          <a href="https://shrtlnk.dev" target="_blank"><h1 class="name">ShrtLnk</h1></a>
+          <div class="view-links">
+            <a href="https://shrtlnk.dev" target="_blank">View Live</a>
+            <a href="https://github.com/JosiahSayers/shrtlnk" target="_blank">View Source</a>
+          </div>
+          <p class="description">A link shortening application built with C# .NET Core MVC</p> <p></p>&nbsp;</p>
           <ul class="about">
             <li>Shortens URLs into 6 digit codes</li>
             <li>C# .NET Core Backend</li>
@@ -93,6 +92,22 @@
             <li>Deployed to Azure App Service</li>
           </ul>
       </div>
+
+      <div class="container">
+        <img class="project-img" src="img/projects/pong.png" />
+        <a href="https://pong.josiahsayers.com" target="_blank"><h1 class="name">Pong</h1></a>
+        <div class="view-links">
+          <a href="https://pong.josiahsayers.com" target="_blank">View Live</a>
+          <a href="https://github.com/JosiahSayers/Pong" target="_blank">View Source</a>
+        </div>
+        <p class="description">A custom implementation of the classic game Pong, using the p5.js framework.</p>
+        <ul class="about">
+          <li>Collision detection</li>
+          <li>CPU controlled opponent</li>
+          <li>Key listener events</li>
+          <li>Sounds on collision detection</li>
+        </ul>
+    </div>
 
       </div>
     </div>
@@ -131,5 +146,7 @@
     <footer>
 
     </footer>
+
+    <script src="/js/main.js"></script>
   </body>
 </html>
