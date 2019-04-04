@@ -24,6 +24,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0s, background-color 0.3s;
+  z-index: 10;
 }
 
 .project-overlay img {
@@ -31,6 +35,10 @@ body{
   border-radius: 10px;
   width: 75%;
   cursor: zoom-out;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  z-index: 10;
 }
 
 .section-header{
@@ -193,6 +201,12 @@ nav p{
   font-size: 2em;
   font-weight: 700;
   margin: 3.5% 0;
+  transition: color 0.3s;
+}
+
+#projects .name-hover {
+  color: lightblue;
+  transition: color 0.3s;
 }
 
 #projects div.container div.view-links {
@@ -344,8 +358,10 @@ li h2{
 }
 
 .hide {
-  display: none;
+  right: -250%;
+  visibility: hidden;
   opacity: 0;
+  transition: opacity 0.3s, visibility 0s, background-color 0.3s;
 }
 
 /*-----------------------------------------------------------------

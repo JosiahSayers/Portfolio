@@ -15,3 +15,15 @@ overlay.addEventListener('click', () => {
   overlay.classList.add('hide');
   overlayImg.classList.add('hide');
 });
+
+const projectContainers = document.querySelectorAll('#projects div.project-boxes-container div.container');
+  projectContainers.forEach(container => {
+    container.addEventListener('mouseenter', event => {
+      event.path[0].children[1].classList.add('name-hover');
+  })
+})
+projectContainers.forEach(container => {
+  container.addEventListener('mouseleave', event => {
+    event.path[0].children[1].classList.remove('name-hover');
+  })
+});
