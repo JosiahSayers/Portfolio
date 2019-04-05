@@ -27,3 +27,10 @@ projectContainers.forEach(container => {
     event.path[0].children[1].children[0].classList.remove('name-hover');
   })
 });
+
+document.addEventListener('keydown', event => {
+  if(event.keyCode === 27) {
+    overlay.classList.add('hide');
+    overlayImg.classList.add('hide');
+  }
+});
