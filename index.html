@@ -32,7 +32,7 @@
   </head>
   <body>
 
-    <div class="project-overlay hide"><img class="hide" src="img/projects/tasks-desktop.png" alt="Zoomed-in project picture" /></div>
+    <div class="project-overlay hide no-select"><img class="hide" src="img/projects/tasks-desktop.png" alt="Zoomed-in project picture" /></div>
 
     <div id="home">
       <div class="info">
@@ -44,7 +44,7 @@
     <input type="checkbox" id="menu-toggle"/>
     <div id="nav-container">
       <label for="menu-toggle"><i class="fas fa-bars"></i></label>
-      <nav id="menu">
+      <nav id="menu" class="no-select">
         <a href="#projects">Projects</a>
         <p>|</p>
         <a href="#aboutMe">About Me</a>
@@ -68,7 +68,7 @@
               <a href="https://todo.josiahsayers.com" target="_blank" rel="noopener">View Live</a>
               <a href="https://github.com/JosiahSayers/Tasks" target="_blank" rel="noopener">View Source</a>
             </div>
-            <p class="description">A to-do list web application built with no frameworks or libraries. Only HTML, CSS, and Javascript.</p>
+            <p class="description">A to-do list web application built with no frameworks or libraries. Only vanilla HTML, CSS, and Javascript.</p>
             <ul class="about">
               <li>Built with pure HTML, CSS and JS</li>
               <li>Javascript Event Listeners</li>
@@ -132,27 +132,27 @@
     <div id="connect">
       <h1 class="section-header">Let's Connect</h1>
       <ul class="networks">
-        <li>
+        <li class="no-select">
             <a href="https://www.linkedin.com/in/josiah-sayers/" target="_blank" rel="noopener">
               <span class="hidden-span">
                 LinkedIn
               </span>
               <i class="fab fa-linkedin"></i></a>
         </li>
-        <li>
+        <li class="no-select">
             <a href="https://github.com/JosiahSayers" target="_blank" rel="noopener">
               <span class="hidden-span">
                 Github
               </span>
               <i class="fab fa-github-square"></i></a>
         </li>
-        <li>
+        <li class="no-select">
           <a href="/docs/josiah.sayers.pdf"  target="_blank" rel="noopener">
             <span class="hidden-span">
               Resume
             </span>
             <i id="resume-icon" class="fas fa-file"></i></a>
-      </li>
+        </li>
       </ul>
     </div>
     <footer>
