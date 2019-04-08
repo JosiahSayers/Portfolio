@@ -8,7 +8,12 @@ projectImages.forEach(imgNode => {
     overlay.classList.remove('hide');
     overlayImg.src = event.path[0].src;
     overlayImg.classList.remove('hide');
-  })
+  });
+  imgNode.addEventListener('touchend', (event) => {
+    overlay.classList.remove('hide');
+    overlayImg.src = event.path[0].src;
+    overlayImg.classList.remove('hide');
+  });
 });
 
 overlay.addEventListener('click', () => {
@@ -17,9 +22,9 @@ overlay.addEventListener('click', () => {
 });
 
 const projectContainers = document.querySelectorAll('#projects div.project-boxes-container div.container');
-  projectContainers.forEach(container => {
-    container.addEventListener('mouseenter', event => {
-      event.path[0].children[1].children[0].classList.add('name-hover');
+projectContainers.forEach(container => {
+  container.addEventListener('mouseenter', event => {
+    event.path[0].children[1].children[0].classList.add('name-hover');
   })
 })
 projectContainers.forEach(container => {
