@@ -169,7 +169,7 @@ nav p{
 }
 
 #projects div.container{
-  width: 500px;
+  max-width: 500px;
   min-height: 450px;
   overflow: hidden;
   background-color: white;
@@ -196,7 +196,7 @@ nav p{
 }
 
 #projects div.container a{
-  text-decoration: none;
+  text-decoration-line: none;
   color: black;
   transition: 0.3s;
 }
@@ -381,6 +381,7 @@ li h2{
 
   body{
     min-width: 320px;
+    width: 100vw;
   }
 
   .project-overlay {
@@ -484,16 +485,16 @@ li h2{
     flex-flow: column nowrap;
     align-items: space-between;
     justify-items: space-between;
-    width: 100%;
+    width: 100vw;
   }
 
   #projects .container{
     margin-bottom: 50px;
-    width: 80%;
+    max-width: 90%;
   }
 
   #projects .name{
-    text-decoration-line: underline;
+    text-decoration-line: none;
   }
 
   #projects h2{
@@ -543,7 +544,5 @@ li h2{
   #projects div.container{
     width: 80%;
     padding: 5%;
-    min-width: calc(320px - 20%);
-    max-width: calc(320px - 20%);
   }
 }
