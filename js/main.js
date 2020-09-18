@@ -2,6 +2,9 @@ const overlay = document.querySelector('.project-overlay');
 const overlayImg = document.querySelector('.project-overlay img');
 const projectContainers = document.querySelectorAll('#projects div.project-boxes-container div.container');
 const projectImages = document.querySelectorAll('.project-img');
+const socialLinks = document.querySelectorAll('.social-link');
+const resumeLinks = document.querySelectorAll('.resume-link');
+const projectLinks = document.querySelectorAll('.project-link');
 
 // Event listeners to set current image in overlay
 projectImages.forEach(imgNode => {
@@ -23,7 +26,7 @@ overlay.addEventListener('click', () => {
   overlayImg.classList.add('hide');
 });
 document.addEventListener('keydown', event => {
-  if(event.keyCode === 27) {
+  if (event.keyCode === 27) {
     overlay.classList.add('hide');
     overlayImg.classList.add('hide');
   }
@@ -40,3 +43,42 @@ projectContainers.forEach(container => {
     event.path[0].children[1].children[0].classList.remove('name-hover');
   })
 });
+
+// event listeners for logging
+socialLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    let currentElement = event.target;
+
+    while (currentElement && !currentElement.classList.contains('social-link') && currentElement.parentElement) {
+      currentElement = currentElement.parentElement;
+    }
+
+    logger.socialInteraction(currentElement.dataset.type);
+  });
+});
+
+resumeLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    let currentElement = event.target;
+
+    while (currentElement && !currentElement.classList.contains('resume-link') && currentElement.parentElement) {
+      currentElement = currentElement.parentElement;
+    }
+
+    logger.resumeView();
+  });
+});
+
+projectLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    let currentElement = event.target;
+
+    while (currentElement && !currentElement.classList.contains('project-link') && currentElement.parentElement) {
+      currentElement = currentElement.parentElement;
+    }
+
+    logger.projectInteraction(currentElement.dataset.name, currentElement.dataset.type);
+  });
+});
+
+logger.onPageLoad();
