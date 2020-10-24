@@ -1,4 +1,4 @@
-const apiUrl = 'https://josiahsayers.mynetgear.com/sidelog/logs';
+const apiUrl = 'https://sidelog-production.herokuapp.com/logs';
 const clientId = '37ddeb0e-3ec9-4fd9-ba54-662c72da4cb7';
 
 const sendLog = (content) => {
