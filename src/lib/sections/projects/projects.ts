@@ -47,7 +47,7 @@ export const projects: ProjectInterface[] = [
 	{
 		name: 'Portfolio',
 		url: 'https://josiahsayers.com',
-		sourcecodeUrl: 'https://github.com/JosiahSayers/Portfolio-v2',
+		sourcecodeUrl: 'https://github.com/JosiahSayers/Portfolio',
 		imageUrl: '',
 		description: 'This website! Built using Svelte and serverless functions',
 		technologies: ['Svelte', 'SvelteKit', 'Node.js', 'TypeScript', 'Bulma', 'MailerSend'],
