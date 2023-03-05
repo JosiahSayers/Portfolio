@@ -8,8 +8,6 @@
 	import { LOGGER } from '$lib/logging/sidelog';
 	import { onMount } from 'svelte';
 
-	export const prerender = true;
-
 	const introNavItem = { text: 'Hello', id: 'intro', active: true };
 	const projectsNavItem = { text: 'My Work', id: 'projects', active: false };
 	const skillsNavItem = { text: 'My Skills', id: 'skills', active: false };

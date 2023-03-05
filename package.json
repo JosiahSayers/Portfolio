@@ -10,19 +10,18 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"ci:test": "cypress run",
-		"ci:test:local": "npm run build && concurrently -s first -k 'http-server ./build -p 3000' 'npm run ci:test'",
-		"test": "start-server-and-test dev 3000 'cypress run'"
+		"ci:test:local": "concurrently -s first -k 'npm run dev' 'npm run ci:test'",
+		"test": "start-server-and-test dev 5173 'cypress open --e2e --browser=chrome'"
 	},
 	"devDependencies": {
 		"@now/build-utils": "^2.7.0",
-		"@playwright/test": "^1.28.1",
-		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "^2.0.1",
 		"@sveltejs/kit": "^1.5.0",
 		"@types/uuid": "^9.0.1",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"concurrently": "^6.2.1",
-		"cypress": "^8.2.0",
+		"cypress": "^12.0.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
