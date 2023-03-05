@@ -11,7 +11,8 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"ci:test": "cypress run",
 		"ci:test:local": "concurrently -s first -k 'npm run dev' 'npm run ci:test'",
-		"test": "start-server-and-test dev 5173 'cypress open --e2e --browser=chrome'"
+		"test": "start-server-and-test dev 5173 'cypress open --e2e --browser=chrome'",
+		"prepare": "svelte-kit sync"
 	},
 	"devDependencies": {
 		"@now/build-utils": "^2.7.0",
