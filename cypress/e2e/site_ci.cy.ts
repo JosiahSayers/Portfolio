@@ -1,7 +1,9 @@
+import { SKILL_LIST } from "../../src/lib/sections/skills/skill-list";
+
 describe('Portfolio', () => {
   beforeEach(() => {
     cy.visit('/');
-    cy.wait(1000);
+    cy.wait(500); // Wait to allow svelte listeners to attach
   });
 
   it('displays the correct subtitle', () => {
@@ -16,6 +18,9 @@ describe('Portfolio', () => {
 
   describe('Projects', () => {
     it('Displays all of the projects', () => {
+      cy.get('.tabs').within(() => {
+        cy.get('a').should('have.attr', 'href', '#projects').should('have.length', 4);
+      });
       cy.contains('Shrtlnk');
       cy.contains('Sidelog');
       cy.contains('Taco Especial');
@@ -33,14 +38,16 @@ describe('Portfolio', () => {
         cy.contains('Allows users to create shortened links to any webpage');
         cy.contains('Easy to use API for developers');
         cy.contains('Developer portal where a user can create and remove applications, with each one being provided a unique API key. The developer portal also shows statistics about the links created with each application.');
-        cy.contains('Chrome extension to quickly create shortened links when browsing any website');
+        cy.contains('Uses the Safe Browsing API from Google to make sure user-submitted links are not malicious');
       });
 
       it('displays the correct technologies', () => {
-        cy.contains('.NET Core');
-        cy.contains('MongoDB');
-        cy.contains('MS SQL Server');
-        cy.contains('Swagger');
+        cy.contains('React');
+        cy.contains('Remix');
+        cy.contains('Postgres');
+        cy.contains('Prisma');
+        cy.contains('SendGrid');
+        cy.contains('Google Safe Browsing API');
       });
     });
 
@@ -77,7 +84,7 @@ describe('Portfolio', () => {
       });
 
       it('displays the correct bullet points', () => {
-        cy.contains('API provides up to date menu information by scraping TacoBell.com and caching the results');
+        cy.contains('API provides up to date menu information by scraping tacobell.com and caching the results');
         cy.contains(`Front end app allows the user to fine tune their recommendations by pulling in available customization options from the API`);
       });
 
@@ -117,33 +124,47 @@ describe('Portfolio', () => {
 
   describe('Skills', () => {
     it('displays the correct frontend skills', () => {
-      cy.contains('Frontend');
-      cy.contains('JavaScript');
-      cy.contains('TypeScript');
-      cy.contains('Angular');
-      cy.contains('Svelte');
-      cy.contains('Karma/Jasmine');
+      const skills = SKILL_LIST.find(list => list.category === 'Frontend');
+      cy.get('#Frontend-column').within(() => {
+        cy.contains('h2', 'Frontend');
+        cy.get('li').should('have.length', skills.technologies.length);
+        cy.get('li').each((item, index) => {
+          cy.wrap(item).should('contain.text', skills.technologies[index].name)
+        });
+      });
     });
     
     it('displays the correct backend skills', () => {
-      cy.contains('Backend');
-      cy.contains('Node.js');
-      cy.contains('Express.js');
-      cy.contains('MongoDB');
-      cy.contains('SQL');
+      const skills = SKILL_LIST.find(list => list.category === 'Backend');
+      cy.get('#Backend-column').within(() => {
+        cy.contains('h2', 'Backend');
+        cy.get('li').should('have.length', skills.technologies.length);
+        cy.get('li').each((item, index) => {
+          cy.wrap(item).should('contain.text', skills.technologies[index].name)
+        });
+      });
     });
     
     it('displays the correct cloud skills', () => {
-      cy.contains('Cloud');
-      cy.contains('Firebase');
-      cy.contains('Apigee');
-      cy.contains('Google Cloud Platform');
+      const skills = SKILL_LIST.find(list => list.category === 'Cloud');
+      cy.get('#Cloud-column').within(() => {
+        cy.contains('h2', 'Cloud');
+        cy.get('li').should('have.length', skills.technologies.length);
+        cy.get('li').each((item, index) => {
+          cy.wrap(item).should('contain.text', skills.technologies[index].name)
+        });
+      });
     });
     
     it('displays the correct development tool skills', () => {
-      cy.contains('Development Tools');
-      cy.contains('Docker');
-      cy.contains('Git');
+      const skills = SKILL_LIST.find(list => list.category === 'Development Tools');
+      cy.get('#Development_Tools-column').within(() => {
+        cy.contains('h2', 'Development Tools');
+        cy.get('li').should('have.length', skills.technologies.length);
+        cy.get('li').each((item, index) => {
+          cy.wrap(item).should('contain.text', skills.technologies[index].name)
+        });
+      });
     });
   });
 
