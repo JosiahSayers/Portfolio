@@ -1,6 +1,7 @@
 describe('Portfolio', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit('/');
+    cy.wait(1000);
   });
 
   it('displays the correct subtitle', () => {
@@ -44,7 +45,7 @@ describe('Portfolio', () => {
     });
 
     describe('Sidelog', () => {
-      beforeEach(() => cy.contains('Sidelog').click());
+      beforeEach(() => cy.contains('Sidelog').should('have.attr', 'href', '#projects').click());
 
       it('displays the correct description', () => {
         cy.contains('Easy to use and cheap to run logging solution for side projects');
@@ -184,7 +185,7 @@ describe('Portfolio', () => {
   });
 
   describe('footer', () => {
-    it('displays the correct copywrite', () => {
+    it('displays the correct copyright', () => {
       cy.contains(`© ${new Date().getFullYear()} Josiah Sayers`);
     });
 

@@ -6,6 +6,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Modal from '$lib/components/modal/Modal.svelte';
 	import { LOGGER } from '$lib/logging/sidelog';
+	import { onMount } from 'svelte';
 
 	const introNavItem = { text: 'Hello', id: 'intro', active: true };
 	const projectsNavItem = { text: 'My Work', id: 'projects', active: false };
@@ -16,7 +17,7 @@
 		active: false
 	};
 
-	LOGGER.info('Page Loaded');
+	onMount(() => LOGGER.info('Page Loaded'));
 </script>
 
 <main>

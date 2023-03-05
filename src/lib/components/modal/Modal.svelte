@@ -9,7 +9,11 @@
 </script>
 
 <div class="modal" class:is-active={isOpen}>
-	<div class="modal-background" on:click={modalService.closeModal} />
+	<div
+		class="modal-background"
+		on:click={modalService.closeModal}
+		on:keydown={(e) => console.log(e.key)}
+	/>
 	<div class="modal-card">
 		<header class="modal-card-head">
 			<p class="modal-card-title">{modalTitle}</p>

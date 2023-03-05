@@ -14,7 +14,14 @@
 
 <span class="is-size-7">
 	{#if project.url}
-		<a href={project.url} target="_blank" rel="noopener" on:click={() => logClick('Live')}> View Live </a>
+		<a
+			href={project.url}
+			target="_blank"
+			rel="noopener noreferrer"
+			on:click={() => logClick('Live')}
+		>
+			View Live
+		</a>
 	{/if}
 
 	{#if project.url && project.sourcecodeUrl}
@@ -22,7 +29,12 @@
 	{/if}
 
 	{#if project.sourcecodeUrl}
-		<a href={project.sourcecodeUrl} target="_blank" rel="noopener" on:click={() => logClick('Code')}>
+		<a
+			href={project.sourcecodeUrl}
+			target="_blank"
+			rel="noopener noreferrer"
+			on:click={() => logClick('Code')}
+		>
 			View Code
 		</a>
 	{/if}

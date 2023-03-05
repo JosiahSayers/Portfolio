@@ -8,8 +8,8 @@
 	{feature}
 {:else}
 	{feature.text.split('<link>')[0]}
-	<a href={feature.url} target="_blank">
-		{linkRegex.exec(feature.text).groups?.text}
+	<a href={feature.url} target="_blank" rel="noreferrer">
+		{linkRegex.exec(feature.text)?.groups?.text}
 	</a>
 	{feature.text.split('</link>')[1]}
 {/if}

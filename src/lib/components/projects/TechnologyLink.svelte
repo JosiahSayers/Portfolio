@@ -5,7 +5,7 @@
 
 <span class="tag is-normal has-background-info-light m-2">
 	{#if link}
-		<a href={link} class="has-text-black" target="_blank" rel="noopener">{technology}</a>
+		<a href={link} class="has-text-black" target="_blank" rel="noopener noreferrer">{technology}</a>
 	{:else}
 		{technology}
 	{/if}
