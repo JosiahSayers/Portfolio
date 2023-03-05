@@ -8,7 +8,7 @@
 	<div class="px-4">
 		<div class="columns is-centered">
 			{#each SKILL_LIST as category}
-				<div class="column category">
+				<div class="column category" id={`${category.category.replace(' ', '_')}-column`}>
 					<h2 class="subtitle">{category.category}</h2>
 
 					<div class="content">
