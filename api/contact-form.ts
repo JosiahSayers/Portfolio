@@ -1,7 +1,7 @@
-import type { NowRequest, NowResponse } from '@vercel/node';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 import MailerSend, { Recipient, EmailParams } from 'mailersend';
 
-export default (req: NowRequest, res: NowResponse): unknown => {
+export default (req: VercelRequest, res: VercelResponse): unknown => {
 	if (req.method === 'POST') {
 		if (!req.body.name) {
 			return res.status(400).json({ msg: 'name must be provided on the body' });

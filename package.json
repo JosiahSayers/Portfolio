@@ -35,13 +35,13 @@
 		"svelte-preprocess": "^4.7.4",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
-		"vercel": "^23.0.1",
+		"vercel": "^28.16.12",
 		"vite": "^4.0.0"
 	},
 	"type": "module",
 	"dependencies": {
 		"bulma": "^0.9.3",
 		"mailersend": "^1.1.0",
-		"uuid": "^8.3.2"
+		"uuid": "^9.0.0"
 	}
 }
