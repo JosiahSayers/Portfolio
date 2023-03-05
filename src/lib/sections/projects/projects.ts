@@ -7,12 +7,12 @@ export const projects: ProjectInterface[] = [
 		sourcecodeUrl: 'https://github.com/JosiahSayers/shrtlnk',
 		imageUrl: 'https://www.josiahsayers.com/img/projects/shrtlnk.png',
 		description: 'A link shortening application with an API and developer portal',
-		technologies: ['.NET Core', 'MongoDB', 'MS SQL Server', 'Swagger'],
+		technologies: ['React', 'Remix', 'Postgres', 'Prisma', 'SendGrid', 'Google Safe Browsing API'],
 		features: [
 			'Allows users to create shortened links to any webpage',
 			'Easy to use API for developers',
 			'Developer portal where a user can create and remove applications, with each one being provided a unique API key. The developer portal also shows statistics about the links created with each application.',
-			'Chrome extension to quickly create shortened links when browsing any website'
+			'Uses the Safe Browsing API from Google to make sure user-submitted links are not malicious'
 		]
 	},
 	{
@@ -24,23 +24,21 @@ export const projects: ProjectInterface[] = [
 		features: [
 			'Fully configurable from a single JSON file',
 			"Support for multiple application's logs on one server",
-			{
-				text: '<link>Angular library</link> published on NPM for easy API consumption',
-				url: 'https://www.npmjs.com/package/sidelog-angular'
-			},
 			'100% test coverage',
 			'Single command local setup for easy development utilizing docker-compose'
 		]
 	},
 	{
 		name: 'Taco Especial',
-		url: 'https://taco.josiahsayers.com',
 		sourcecodeUrl: 'https://github.com/JosiahSayers/Taco-Especial',
 		imageUrl: '',
 		description: 'Service to suggest randomly customized menu items from Taco Bell',
 		technologies: ['Svelte', 'Node.js', 'TypeScript', 'Express', 'Cheerio', 'Axios'],
 		features: [
-			'API provides up to date menu information by scraping TacoBell.com and caching the results',
+			{
+				text: 'API provides up to date menu information by scraping <link>tacobell.com</link> and caching the results',
+				url: 'https://tacobell.com'
+			},
 			'Front end app allows the user to fine tune their recommendations by pulling in available customization options from the API'
 		]
 	},
@@ -60,6 +58,12 @@ export const projects: ProjectInterface[] = [
 ];
 
 export const technologyLinks = {
+	Remix: 'https://remix.run',
+	Postgres: 'https://www.postgresql.org/',
+	SendGrid: 'https://sendgrid.com/',
+	Prisma: 'https://www.prisma.io/',
+	React: 'https://reactjs.org/',
+	'Google Safe Browsing API': 'https://developers.google.com/safe-browsing',
 	'.NET Core': 'https://dotnet.microsoft.com/',
 	MongoDB: 'https://www.mongodb.com/',
 	'MS SQL Server': 'https://www.microsoft.com/en-us/sql-server/',

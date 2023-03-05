@@ -15,14 +15,34 @@ export const SKILL_LIST: Skill[] = [
 				tags: []
 			},
 			{
-				name: 'Angular',
+				name: 'React',
 				type: 'Frontend Framework',
-				tags: ['TypeScript', 'JavaScript', 'Single Page App', 'SASS/SCSS']
+				tags: ['TypeScript', 'JavaScript']
 			},
 			{
 				name: 'Svelte',
 				type: 'Frontend Framework',
 				tags: ['TypeScript', 'JavaScript', 'Single Page App']
+			},
+			{
+				name: 'Angular',
+				type: 'Frontend Framework',
+				tags: ['TypeScript', 'JavaScript', 'Single Page App', 'SASS/SCSS']
+			},
+			{
+				name: 'Jest',
+				type: 'Testing',
+				tags: ['Unit Testing']
+			},
+			{
+				name: 'Vitest',
+				type: 'Testing',
+				tags: ['Unit Testing']
+			},
+			{
+				name: 'Cypress',
+				type: 'Testing',
+				tags: ['End-to-end Testing']
 			},
 			{
 				name: 'Karma/Jasmine',
@@ -45,7 +65,32 @@ export const SKILL_LIST: Skill[] = [
 				tags: []
 			},
 			{
+				name: 'Remix',
+				type: 'Backend Framework',
+				tags: []
+			},
+			{
+				name: 'SvelteKit',
+				type: 'Backend Framework',
+				tags: []
+			},
+			{
+				name: 'Ruby on Rails',
+				type: 'Backend Framework',
+				tags: ['Ruby']
+			},
+			{
 				name: 'MongoDB',
+				type: 'Database',
+				tags: []
+			},
+			{
+				name: 'Postgres',
+				type: 'Database',
+				tags: [],
+			},
+			{
+				name: 'MS SQL Server',
 				type: 'Database',
 				tags: []
 			},
