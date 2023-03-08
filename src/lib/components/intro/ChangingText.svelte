@@ -23,6 +23,7 @@
 			currentText = currentEntry.substr(0, currentIndex + 1);
 		} else if (shouldReverseDirection) {
 			clearInterval(intervalRef);
+			intervalRef = null;
 			const timeoutRef = setTimeout(() => {
 				intervalRef = setInterval(updateText, waitTimeBetweenStroke);
 				clearTimeout(timeoutRef);
@@ -39,7 +40,7 @@
 </script>
 
 <span>
-	{currentText}<span class="blinking-cursor">|</span>
+	{currentText}<span class:blinking-cursor={!intervalRef}>|</span>
 </span>
 
 <style>
