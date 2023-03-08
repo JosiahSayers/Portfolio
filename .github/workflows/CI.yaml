@@ -3,14 +3,14 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  CI:
+  local-cypress:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
  
       - name: Cache Dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -26,7 +26,28 @@ jobs:
  
       - name: Run Tests Locally
         run: npm run ci:test:local
+
+  staging-cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Setup Node 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
  
+      - name: Install
+        run: npm ci
+
       - name: Deploy to Staging
         id: deploy-vercel-staging
         uses: amondnet/vercel-action@v20
